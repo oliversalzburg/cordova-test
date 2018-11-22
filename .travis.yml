@@ -1,8 +1,10 @@
 language: node_js
 node_js:
   - "lts/*"
-before_install:
+install:
   - npm install --global cordova-coho fairmanager/spodr#feature/install
 script:
   - coho repo-update -g -r all
   - spodr install
+  - cd cordova-plugin-inappbrowser
+  - npm test
