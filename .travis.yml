@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "lts/*"
 before_install:
-  - npm install --global cordova-coho fairmanager/spodr#install
+  - npm install --global cordova-coho "fairmanager/spodr#install"
 script:
   - coho repo-update -g -r all
   - spodr install
