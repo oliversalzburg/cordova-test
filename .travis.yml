@@ -5,6 +5,6 @@ install:
   - npm install --global cordova-coho fairmanager/spodr#feature/install
 script:
   - coho repo-update -g -r all
-  - spodr install
+  - spodr install -j8
   - cd cordova-plugin-inappbrowser
   - npm test
